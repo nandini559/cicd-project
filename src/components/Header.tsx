@@ -37,10 +37,11 @@ export const Header: React.FC = () => {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-[#081c18]/95 backdrop-blur-md shadow-lg shadow-black/20 py-3.5' : 'bg-[#0B221E] py-4 md:py-5'
-        } border-b border-[#C2A268]/20`}
+        className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#081c18]/95 backdrop-blur-md shadow-lg shadow-black/20 py-3.5' : 'bg-[#0B221E] py-4 md:py-5'
+          } border-b border-[#C2A268]/20`}
       >
+
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Left: MENU Button */}
@@ -122,73 +123,64 @@ export const Header: React.FC = () => {
                 </p>
                 <Link
                   to="/"
-                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${
-                    location.pathname === '/' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
-                  }`}
+                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
+                    }`}
                 >
                   Home
                 </Link>
                 <Link
                   to="/expertise"
-                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${
-                    location.pathname === '/expertise' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
-                  }`}
+                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/expertise' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
+                    }`}
                 >
                   Expertise & Services
                 </Link>
                 <Link
                   to="/sectors"
-                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${
-                    location.pathname === '/sectors' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
-                  }`}
+                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/sectors' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
+                    }`}
                 >
                   Sectors
                 </Link>
                 <Link
                   to="/team"
-                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${
-                    location.pathname === '/team' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
-                  }`}
+                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/team' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
+                    }`}
                 >
                   Our Team
                 </Link>
                 <Link
                   to="/jobs"
-                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${
-                    location.pathname === '/jobs' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
-                  }`}
+                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/jobs' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
+                    }`}
                 >
                   Job Openings
                 </Link>
                 <Link
                   to="/insights"
-                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${
-                    location.pathname === '/insights' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
-                  }`}
+                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/insights' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
+                    }`}
                 >
                   News & Insights
                 </Link>
                 <Link
                   to="/testimonials"
-                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${
-                    location.pathname === '/testimonials' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
-                  }`}
+                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/testimonials' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
+                    }`}
                 >
                   Testimonials
                 </Link>
                 <Link
                   to="/register-vacancy"
-                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${
-                    location.pathname === '/register-vacancy' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
-                  }`}
+                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/register-vacancy' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
+                    }`}
                 >
                   Register a Vacancy
                 </Link>
                 <Link
                   to="/contact"
-                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${
-                    location.pathname === '/contact' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
-                  }`}
+                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/contact' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
+                    }`}
                 >
                   Contact Us
                 </Link>

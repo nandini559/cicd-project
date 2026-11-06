@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 import { SECTORS, SERVICES, JOBS, ARTICLES, TESTIMONIALS, TEAM_MEMBERS } from '../data/mockData';
 import { Job, Sector } from '../types';
 import { JobModal } from '../components/JobModal';
-import { 
-  ArrowRight, 
-  ChevronLeft, 
-  ChevronRight, 
-  Briefcase, 
-  MapPin, 
-  Clock, 
-  CheckCircle, 
-  Building2, 
-  ShieldCheck, 
-  Users, 
+import {
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+  Briefcase,
+  MapPin,
+  Clock,
+  CheckCircle,
+  Building2,
+  ShieldCheck,
+  Users,
   Globe2,
   FileText,
   Mail,
@@ -35,7 +35,7 @@ export const HomePage: React.FC = () => {
       ctaLink: '/jobs',
       secondaryText: 'Explore Sectors',
       secondaryLink: '/sectors',
-      bgImage: '/public/assets/aistudio/Screenshot__231__4f6fa5dc.png',
+      bgImage: 'https://elevatepartners.ie/wp-content/uploads/2024/09/background1.jpg',
       hasOutlineButton: false,
     },
     {
@@ -80,114 +80,43 @@ export const HomePage: React.FC = () => {
     <div className="bg-[#FAF8F5] text-slate-800">
       {/* 1. HERO SECTION WITH CAROUSEL */}
       <section className="relative h-[85vh] min-h-[580px] max-h-[820px] bg-[#071815] overflow-hidden flex items-center">
-        {heroSlides.map((slide, index) => {
-          const isActive = index === currentSlide;
-          return (
-            <div
-              key={slide.id}
-              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
-              }`}
-            >
-              {/* Background with Dark/Emerald Overlay Scrim */}
-              <img
-                src={slide.bgImage}
-                alt={slide.title}
-                className="w-full h-full object-cover object-center scale-105 transition-transform duration-[7000ms] ease-out"
-                style={{ transform: isActive ? 'scale(1.0)' : 'scale(1.08)' }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#071815]/90 via-[#071815]/75 to-[#071815]/40 backdrop-brightness-[0.85]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#071815] via-transparent to-transparent opacity-80" />
 
-              {/* Slide Content */}
-              <div className="relative max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex items-center">
-                <div className="max-w-2xl text-white pt-10 sm:pt-0">
-                  {/* Vertical indicator / bullet for Slide 1 visual match */}
-                  <div className="flex items-center gap-3 mb-6">
-                    <span className="w-2.5 h-6 rounded-full bg-white shadow-sm inline-block"></span>
-                    <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#C2A268]">
-                      {slide.kicker}
-                    </span>
-                  </div>
+        {/* Single Background Image with Continuous Zoom-Out */}
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            src="https://elevatepartners.ie/wp-content/uploads/2024/09/background1.jpg"
+            alt="Hero background"
+            className="w-full h-full object-cover animate-hero-zoom"
+          />
 
-                  <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold tracking-tight text-white leading-[1.08] whitespace-pre-line">
-                    {slide.title}
-                  </h1>
+          {/* Dark/Emerald Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#071815]/90 via-[#071815]/75 to-[#071815]/40 backdrop-brightness-[0.85]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#071815] via-transparent to-transparent opacity-80" />
 
-                  <p className="mt-6 text-base sm:text-lg md:text-xl text-slate-200 font-light leading-relaxed max-w-xl">
-                    {slide.subtitle}
-                  </p>
+        </div>
 
-                  <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-4">
-                    {slide.hasOutlineButton ? (
-                      <Link
-                        to={slide.ctaLink}
-                        className="px-8 py-3.5 border-2 border-white hover:border-[#C2A268] hover:bg-[#C2A268] text-white hover:text-[#0B221E] font-semibold text-xs tracking-[0.2em] uppercase transition-all duration-200"
-                      >
-                        {slide.ctaText}
-                      </Link>
-                    ) : (
-                      <Link
-                        to={slide.ctaLink}
-                        className="px-8 py-3.5 bg-[#C2A268] hover:bg-[#e4cf9b] text-[#0B221E] font-semibold text-xs tracking-[0.2em] uppercase transition-all duration-200 shadow-md"
-                      >
-                        {slide.ctaText}
-                      </Link>
-                    )}
+        {/* Hero Content */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+          <div className="max-w-2xl w-full text-white pt-10 sm:pt-0">
 
-                    <Link
-                      to={slide.secondaryLink}
-                      className="px-6 py-3.5 border border-white/40 hover:border-white text-white font-semibold text-xs tracking-[0.2em] uppercase transition-all duration-200"
-                    >
-                      {slide.secondaryText}
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          );
-        })}
+            <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-heading  tracking-tight text-white leading-[1.08]">
+              Reaching New
+            </h1>
 
-        {/* Carousel Slide Indicators and Controls */}
-        <div className="absolute bottom-8 left-0 right-0 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Slide Indicator Dots */}
-          <div className="flex items-center gap-3">
-            {heroSlides.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrentSlide(i)}
-                className={`transition-all duration-300 rounded-full ${
-                  i === currentSlide
-                    ? 'w-8 h-2 bg-[#C2A268]'
-                    : 'w-2 h-2 bg-white/40 hover:bg-white/80'
-                }`}
-                aria-label={`Go to slide ${i + 1}`}
-              />
-            ))}
-          </div>
+            <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-heading  tracking-tight text-white leading-[1.08]">
+              Heights
+            </h1>
 
-          {/* Left / Right Nav Buttons */}
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)}
-              className="w-10 h-10 border border-white/20 hover:border-[#C2A268] flex items-center justify-center text-white hover:text-[#C2A268] transition-colors"
-              aria-label="Previous slide"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <button
-              onClick={() => setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}
-              className="w-10 h-10 border border-white/20 hover:border-[#C2A268] flex items-center justify-center text-white hover:text-[#C2A268] transition-colors"
-              aria-label="Next slide"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
+            <p className="mt-6 text-base sm:text-lg md:text-xl text-slate-200 font-light leading-relaxed max-w-xl">
+              Elevate Partners is a boutique recruitment consultancy firm connecting exceptional talent with industry-leading opportunities across the financial services sector.
+            </p>
+
           </div>
         </div>
       </section>
 
       {/* 2. CREDIBILITY & KEY NUMBERS STRIP */}
-      <section className="bg-[#0B221E] text-white border-y border-[#C2A268]/20 py-8 lg:py-10">
+      {/* <section className="bg-[#0B221E] text-white border-y border-[#C2A268]/20 py-8 lg:py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 divide-y md:divide-y-0 md:divide-x divide-[#C2A268]/20">
             <div className="pt-4 md:pt-0 md:px-4 text-center">
@@ -208,7 +137,7 @@ export const HomePage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 3. INTRODUCTION / THE ELEVATE PARTNERS MODEL */}
       <section className="py-20 lg:py-24 bg-[#FAF8F5]">
@@ -462,51 +391,46 @@ export const HomePage: React.FC = () => {
           <div className="flex flex-wrap items-center gap-2 mb-8 pb-3 border-b border-slate-200">
             <button
               onClick={() => setActiveSectorTab('all')}
-              className={`px-4 py-2 text-xs font-semibold tracking-wider uppercase transition-colors ${
-                activeSectorTab === 'all'
-                  ? 'bg-[#0B221E] text-[#C2A268]'
-                  : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
-              }`}
+              className={`px-4 py-2 text-xs font-semibold tracking-wider uppercase transition-colors ${activeSectorTab === 'all'
+                ? 'bg-[#0B221E] text-[#C2A268]'
+                : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
+                }`}
             >
               All Roles
             </button>
             <button
               onClick={() => setActiveSectorTab('aircraft-leasing')}
-              className={`px-4 py-2 text-xs font-semibold tracking-wider uppercase transition-colors ${
-                activeSectorTab === 'aircraft-leasing'
-                  ? 'bg-[#0B221E] text-[#C2A268]'
-                  : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
-              }`}
+              className={`px-4 py-2 text-xs font-semibold tracking-wider uppercase transition-colors ${activeSectorTab === 'aircraft-leasing'
+                ? 'bg-[#0B221E] text-[#C2A268]'
+                : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
+                }`}
             >
               Aircraft Leasing
             </button>
             <button
               onClick={() => setActiveSectorTab('accounting-finance')}
-              className={`px-4 py-2 text-xs font-semibold tracking-wider uppercase transition-colors ${
-                activeSectorTab === 'accounting-finance'
-                  ? 'bg-[#0B221E] text-[#C2A268]'
-                  : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
-              }`}
+              className={`px-4 py-2 text-xs font-semibold tracking-wider uppercase transition-colors ${activeSectorTab === 'accounting-finance'
+                ? 'bg-[#0B221E] text-[#C2A268]'
+                : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
+                }`}
             >
               Finance & Tax
             </button>
             <button
               onClick={() => setActiveSectorTab('private-equity-credit')}
-              className={`px-4 py-2 text-xs font-semibold tracking-wider uppercase transition-colors ${
-                activeSectorTab === 'private-equity-credit'
-                  ? 'bg-[#0B221E] text-[#C2A268]'
-                  : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
-              }`}
+              className={`px-4 py-2 text-xs font-semibold tracking-wider uppercase transition-colors ${activeSectorTab === 'private-equity-credit'
+                ? 'bg-[#0B221E] text-[#C2A268]'
+                : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
+                }`}
             >
               Private Credit & PE
             </button>
             <button
               onClick={() => setActiveSectorTab('risk-compliance')}
-              className={`px-4 py-2 text-xs font-semibold tracking-wider uppercase transition-colors ${
-                activeSectorTab === 'risk-compliance'
-                  ? 'bg-[#0B221E] text-[#C2A268]'
-                  : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
-              }`}
+              className={`px-4 py-2 text-xs font-semibold tracking-wider uppercase transition-colors ${activeSectorTab === 'risk-compliance'
+                ? 'bg-[#0B221E] text-[#C2A268]'
+                : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
+                }`}
             >
               Risk & Compliance
             </button>
