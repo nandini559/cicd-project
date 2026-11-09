@@ -79,8 +79,7 @@ export const HomePage: React.FC = () => {
   return (
     <div className="bg-[#FAF8F5] text-slate-800">
       {/* 1. HERO SECTION WITH CAROUSEL */}
-      <section className="relative h-[85vh] min-h-[580px] max-h-[820px] bg-[#071815] overflow-hidden flex items-center">
-
+      <section className="relative -mt-[85px] pt-[85px] h-[calc(85vh+85px)] min-h-[665px] max-h-[905px] bg-[#071815] overflow-hidden flex items-center">
         {/* Single Background Image with Continuous Zoom-Out */}
         <div className="absolute inset-0 overflow-hidden">
           <img
@@ -140,52 +139,30 @@ export const HomePage: React.FC = () => {
       </section> */}
 
       {/* 3. INTRODUCTION / THE ELEVATE PARTNERS MODEL */}
-      <section className="py-20 lg:py-24 bg-[#FAF8F5]">
+      <section className=" lg:py-24 bg-[#FAF8F5] p-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-6 space-y-6">
               <div className="inline-flex items-center gap-2">
-                <span className="w-6 h-[2px] bg-[#C2A268]"></span>
-                <span className="text-xs font-semibold tracking-[0.25em] text-[#C2A268] uppercase">
-                  Boutique Consultancy
-                </span>
+
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-semibold text-[#0B221E] tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-semibold text-[#C2A268] tracking-tight leading-tight">
                 Trusted Partners in Specialized Human Capital.
               </h2>
               <p className="text-base text-slate-600 leading-relaxed">
-                Elevate Partners was founded on a simple principle: high-stakes financial recruitment demands deep industry immersion, not transactional volume.
-              </p>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                We work as strategic advisors to international aircraft lessors, private credit funds, banks, and corporate institutions. Every mandate is led directly by our directors, guaranteeing institutional credibility, total confidentiality, and candidate shortlists of rare calibre.
+                Elevate Partners was founded on a simple principle: high-stakes financial recruitment demands deep industry immersion, not transactional volume.                We work as strategic advisors to international aircraft lessors, private credit funds, banks, and corporate institutions. Every mandate is led directly by our directors, guaranteeing institutional credibility, total confidentiality, and candidate shortlists of rare calibre.
+
               </p>
 
-              <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-medium text-slate-700">
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#C2A268]" />
-                  <span>Partner-Led Search Delivery</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#C2A268]" />
-                  <span>Exhaustive Cross-Border Mapping</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#C2A268]" />
-                  <span>Permanent & Interim Capabilities</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#C2A268]" />
-                  <span>Discreet Board-Level Representation</span>
-                </div>
-              </div>
+
+
 
               <div className="pt-4">
                 <Link
                   to="/team"
-                  className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-[#0B221E] hover:text-[#C2A268] transition-colors"
+                  className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-[#0B221E] hover:text-[#C2A268] transition-colors border p-6"
                 >
-                  Meet Our Leadership Team
-                  <ArrowRight className="w-4 h-4" />
+                  Our Expertise
                 </Link>
               </div>
             </div>
@@ -302,7 +279,7 @@ export const HomePage: React.FC = () => {
                 {/* Notice the curved corner styling matching Screenshot 236 */}
                 <div className="relative overflow-hidden shadow-2xl rounded-tl-[85px] md:rounded-tl-[120px] rounded-br-[35px] border border-[#E5DFD5]">
                   <img
-                    src="/public/assets/aistudio/Screenshot__236__c852f41c.png"
+                    src="https://elevatepartners.ie/wp-content/uploads/2024/12/pexels-sora-shimazaki-5673488-1-scaled.jpg"
                     alt="Supporting candidates typing at laptop"
                     className="w-full h-[400px] sm:h-[460px] object-cover object-right"
                   />

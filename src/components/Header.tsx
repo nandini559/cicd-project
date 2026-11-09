@@ -8,7 +8,7 @@ export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
-
+  const isHomePage = location.pathname === "/";
   useEffect(() => {
     setIsMenuOpen(false);
     window.scrollTo(0, 0);
@@ -36,9 +36,16 @@ export const Header: React.FC = () => {
 
   return (
     <>
-      <header
+      {/* <header
         className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#081c18]/95 backdrop-blur-md shadow-lg shadow-black/20 py-3.5' : 'bg-[#0B221E] py-4 md:py-5'
           } border-b border-[#C2A268]/20`}
+      > */}
+
+      <header
+        className={`sticky top-0 z-50 transition-all duration-300 ${isHomePage && !isScrolled
+          ? "bg-transparent py-4 md:py-5"
+          : "bg-[#081c18]/95 backdrop-blur-md shadow-lg shadow-black/20 py-3.5"
+          }  `}
       >
 
 
