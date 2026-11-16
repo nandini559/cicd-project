@@ -125,187 +125,69 @@ export const Header: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 py-10 my-auto">
               {/* Primary Links */}
               <div className="lg:col-span-5 flex flex-col space-y-4 md:space-y-6">
-                <p className="text-xs font-semibold tracking-[0.25em] text-[#C2A268] uppercase mb-1">
-                  Navigation
-                </p>
+
                 <Link
                   to="/"
-                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
+                  className={`text-2xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
                     }`}
                 >
                   Home
                 </Link>
                 <Link
                   to="/expertise"
-                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/expertise' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
+                  className={`text-2xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/expertise' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
                     }`}
                 >
                   Expertise & Services
                 </Link>
                 <Link
                   to="/sectors"
-                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/sectors' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
+                  className={`text-2xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/sectors' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
                     }`}
                 >
                   Sectors
                 </Link>
                 <Link
                   to="/team"
-                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/team' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
+                  className={`text-2xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/team' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
                     }`}
                 >
                   Our Team
                 </Link>
                 <Link
                   to="/jobs"
-                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/jobs' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
+                  className={`text-2xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/jobs' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
                     }`}
                 >
                   Job Openings
                 </Link>
                 <Link
                   to="/insights"
-                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/insights' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
+                  className={`text-2xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/insights' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
                     }`}
                 >
                   News & Insights
                 </Link>
                 <Link
                   to="/testimonials"
-                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/testimonials' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
+                  className={`text-2xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/testimonials' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
                     }`}
                 >
                   Testimonials
                 </Link>
                 <Link
                   to="/register-vacancy"
-                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/register-vacancy' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
+                  className={`text-2xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/register-vacancy' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
                     }`}
                 >
                   Register a Vacancy
                 </Link>
                 <Link
                   to="/contact"
-                  className={`text-2xl md:text-3xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/contact' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
+                  className={`text-2xl font-heading font-medium tracking-wide transition-colors ${location.pathname === '/contact' ? 'text-[#C2A268]' : 'text-slate-100 hover:text-[#C2A268]'
                     }`}
                 >
                   Contact Us
-                </Link>
-              </div>
-
-              {/* Sectors Quick Links */}
-              <div className="lg:col-span-4 border-t lg:border-t-0 lg:border-l border-[#C2A268]/20 pt-8 lg:pt-0 lg:pl-10">
-                <p className="text-xs font-semibold tracking-[0.25em] text-[#C2A268] uppercase mb-4">
-                  Key Sectors
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                  {SECTORS.map((sec) => (
-                    <Link
-                      key={sec.id}
-                      to={`/sectors/${sec.slug}`}
-                      className="text-slate-300 hover:text-[#C2A268] transition-colors py-1 flex items-center gap-1.5 group"
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#C2A268]/50 group-hover:bg-[#C2A268] transition-colors"></span>
-                      <span>{sec.title}</span>
-                    </Link>
-                  ))}
-                </div>
-
-                <div className="mt-8 pt-6 border-t border-[#C2A268]/20">
-                  <p className="text-xs font-semibold tracking-[0.25em] text-[#C2A268] uppercase mb-3">
-                    Talent Solutions
-                  </p>
-                  <div className="space-y-2 text-sm text-slate-300">
-                    <Link to="/expertise#permanent-recruitment" className="block hover:text-[#C2A268] transition-colors">
-                      Permanent Recruitment
-                    </Link>
-                    <Link to="/expertise#executive-search" className="block hover:text-[#C2A268] transition-colors">
-                      Retained & Executive Search
-                    </Link>
-                    <Link to="/expertise#contract-solutions" className="block hover:text-[#C2A268] transition-colors">
-                      Temporary & Contract Solutions
-                    </Link>
-                    <Link to="/expertise#talent-mapping" className="block hover:text-[#C2A268] transition-colors">
-                      Talent Mapping & Benchmarking
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              {/* Office Contact Information */}
-              <div className="lg:col-span-3 border-t lg:border-t-0 lg:border-l border-[#C2A268]/20 pt-8 lg:pt-0 lg:pl-10 flex flex-col justify-between">
-                <div>
-                  <p className="text-xs font-semibold tracking-[0.25em] text-[#C2A268] uppercase mb-4">
-                    Office Locations
-                  </p>
-
-                  <div className="space-y-6 text-sm text-slate-300">
-                    <div>
-                      <h4 className="font-semibold text-white mb-1 flex items-center gap-2">
-                        <MapPin className="w-4 h-4 text-[#C2A268]" /> Dublin Headquarters
-                      </h4>
-                      <p className="text-xs leading-relaxed text-slate-400">
-                        29/30 Fitzwilliam Square South<br />
-                        Dublin 2, D02 RF20, Ireland
-                      </p>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold text-white mb-1 flex items-center gap-2">
-                        <MapPin className="w-4 h-4 text-[#C2A268]" /> London Office
-                      </h4>
-                      <p className="text-xs leading-relaxed text-slate-400">
-                        12 Hay Hill, Mayfair<br />
-                        London, W1J 8NR, United Kingdom
-                      </p>
-                    </div>
-
-                    <div className="pt-2 space-y-2 text-xs">
-                      <p className="flex items-center gap-2 text-slate-300">
-                        <Phone className="w-3.5 h-3.5 text-[#C2A268]" />
-                        <a href="tel:+35316916022" className="hover:text-[#C2A268] transition-colors">
-                          +353 1 691 6022
-                        </a>
-                      </p>
-                      <p className="flex items-center gap-2 text-slate-300">
-                        <Mail className="w-3.5 h-3.5 text-[#C2A268]" />
-                        <a href="mailto:info@elevatepartners.ie" className="hover:text-[#C2A268] transition-colors">
-                          info@elevatepartners.ie
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-8 pt-6 border-t border-[#C2A268]/20">
-                  <Link
-                    to="/contact"
-                    className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 bg-[#C2A268] text-[#0B221E] font-semibold text-xs tracking-wider uppercase hover:bg-[#e4cf9b] transition-colors"
-                  >
-                    Get in Touch
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Drawer Footer */}
-            <div className="border-t border-[#C2A268]/20 pt-4 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400">
-              <p>© {new Date().getFullYear()} Elevate Partners. All rights reserved.</p>
-              <div className="flex items-center gap-6 mt-2 sm:mt-0">
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-[#C2A268] transition-colors"
-                >
-                  LinkedIn
-                </a>
-                <Link to="/contact" className="hover:text-[#C2A268] transition-colors">
-                  Privacy Policy
-                </Link>
-                <Link to="/contact" className="hover:text-[#C2A268] transition-colors">
-                  Terms of Service
                 </Link>
               </div>
             </div>
