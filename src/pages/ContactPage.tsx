@@ -38,7 +38,7 @@ export const ContactPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <span className="text-xs font-semibold tracking-[0.25em] text-[#C2A268] uppercase block mb-3">
-              Direct Contact
+              Direct Contact Us
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-medium tracking-tight text-white">
               Get In Touch
@@ -105,9 +105,8 @@ export const ContactPage: React.FC = () => {
                         type="text"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className={`w-full px-3 py-2 text-sm bg-[#FAF8F5] border ${
-                          errors.name ? 'border-red-500' : 'border-slate-300 focus:border-[#0B221E]'
-                        } rounded-none outline-none`}
+                        className={`w-full px-3 py-2 text-sm bg-[#FAF8F5] border ${errors.name ? 'border-red-500' : 'border-slate-300 focus:border-[#0B221E]'
+                          } rounded-none outline-none`}
                         placeholder="John Doe"
                       />
                       {errors.name && <p className="text-xs text-red-600 mt-1">{errors.name}</p>}
@@ -121,9 +120,8 @@ export const ContactPage: React.FC = () => {
                         type="email"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className={`w-full px-3 py-2 text-sm bg-[#FAF8F5] border ${
-                          errors.email ? 'border-red-500' : 'border-slate-300 focus:border-[#0B221E]'
-                        } rounded-none outline-none`}
+                        className={`w-full px-3 py-2 text-sm bg-[#FAF8F5] border ${errors.email ? 'border-red-500' : 'border-slate-300 focus:border-[#0B221E]'
+                          } rounded-none outline-none`}
                         placeholder="john.doe@firm.ie"
                       />
                       {errors.email && <p className="text-xs text-red-600 mt-1">{errors.email}</p>}
@@ -202,9 +200,8 @@ export const ContactPage: React.FC = () => {
                       rows={5}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className={`w-full px-3 py-2 text-sm bg-[#FAF8F5] border ${
-                        errors.message ? 'border-red-500' : 'border-slate-300 focus:border-[#0B221E]'
-                      } rounded-none outline-none`}
+                      className={`w-full px-3 py-2 text-sm bg-[#FAF8F5] border ${errors.message ? 'border-red-500' : 'border-slate-300 focus:border-[#0B221E]'
+                        } rounded-none outline-none`}
                       placeholder="Please outline the nature of your recruitment mandate or confidential career inquiry..."
                     ></textarea>
                     {errors.message && <p className="text-xs text-red-600 mt-1">{errors.message}</p>}
